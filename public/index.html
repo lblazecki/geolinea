@@ -3,12 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <meta
     name="description"
-    content="GEO-LINEA d.o.o. - geodetske usluge, 3D skeniranje, LiDAR i obrada prostornih podataka."
+    content="GEO-LINEA d.o.o. pruža geodetske usluge, izradu geodetskih elaborata i podloga, geodetsko snimanje, 3D i LiDAR skeniranje te obradu prostornih podataka."
   />
 
-  <title>GEO-LINEA d.o.o.</title>
+  <title>GEO-LINEA d.o.o. | Geodetske usluge</title>
 
   <style>
     * {
@@ -82,13 +83,22 @@
           rgba(10, 35, 60, 0.82),
           rgba(10, 35, 60, 0.82)
         ),
-        url("https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1800&q=80")
+        url("images/hero.jpg")
         center / cover no-repeat;
       color: #ffffff;
     }
 
     .hero-content {
-      max-width: 720px;
+      max-width: 760px;
+    }
+
+    .hero-eyebrow {
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      font-size: 0.85rem;
+      font-weight: 700;
+      margin-bottom: 16px;
+      color: #dbe7f3;
     }
 
     .hero h1 {
@@ -99,7 +109,7 @@
 
     .hero p {
       font-size: 1.2rem;
-      max-width: 650px;
+      max-width: 690px;
       margin-bottom: 32px;
       color: #e5edf5;
     }
@@ -129,7 +139,7 @@
     }
 
     .section-intro {
-      max-width: 720px;
+      max-width: 760px;
       color: #64748b;
       margin-bottom: 45px;
     }
@@ -151,6 +161,10 @@
       padding: 30px;
     }
 
+    .service-card.primary {
+      border: 2px solid #123c69;
+    }
+
     .service-card h3 {
       margin-bottom: 12px;
       color: #123c69;
@@ -158,6 +172,16 @@
 
     .service-card p {
       color: #64748b;
+    }
+
+    .service-card ul {
+      margin-top: 16px;
+      padding-left: 20px;
+      color: #4b5563;
+    }
+
+    .service-card li {
+      margin-bottom: 8px;
     }
 
     .about-grid {
@@ -221,8 +245,31 @@
     footer {
       background: #081f35;
       color: #aebdca;
-      padding: 25px 0;
+      padding: 40px 0 25px;
       font-size: 0.9rem;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr;
+      gap: 50px;
+      margin-bottom: 30px;
+    }
+
+    .footer-company {
+      color: #ffffff;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    .footer-details {
+      line-height: 1.8;
+    }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255, 255, 255, 0.12);
+      padding-top: 20px;
+      color: #8296a8;
     }
 
     @media (max-width: 800px) {
@@ -232,7 +279,8 @@
 
       .service-grid,
       .about-grid,
-      .contact-info {
+      .contact-info,
+      .footer-grid {
         grid-template-columns: 1fr;
       }
 
@@ -255,7 +303,7 @@
       <a href="#" class="logo">GEO-LINEA</a>
 
       <ul class="nav-links">
-        <li><a href="#usluge">Usluge</a></li>
+        <li><a href="#usluge">Geodetske usluge</a></li>
         <li><a href="#o-nama">O nama</a></li>
         <li><a href="#kontakt">Kontakt</a></li>
       </ul>
@@ -268,52 +316,89 @@
   <section class="hero">
     <div class="container">
       <div class="hero-content">
-        <h1>Precizni prostorni podaci za stvarni svijet.</h1>
+
+        <div class="hero-eyebrow">
+          Geodetske usluge i prostorni podaci
+        </div>
+
+        <h1>Precizna geodetska rješenja za vaš projekt.</h1>
 
         <p>
-          GEO-LINEA pruža geodetske usluge, 3D snimanje,
-          LiDAR skeniranje i obradu prostornih podataka
-          za građevinske, infrastrukturne i industrijske projekte.
+          GEO-LINEA pruža geodetske usluge, geodetsko snimanje,
+          izradu elaborata i podloga te suvremeno 3D i LiDAR snimanje
+          za građevinske, infrastrukturne i druge projekte.
         </p>
 
-        <a href="#kontakt" class="button">Kontaktirajte nas</a>
+        <a href="#kontakt" class="button">
+          Zatražite informacije
+        </a>
+
       </div>
     </div>
   </section>
 
   <section id="usluge" class="services">
     <div class="container">
-      <h2 class="section-title">Usluge</h2>
+
+      <h2 class="section-title">Geodetske usluge</h2>
 
       <p class="section-intro">
-        Od terenskog prikupljanja podataka do gotovih digitalnih podloga
-        za projektiranje, dokumentiranje i upravljanje prostorom.
+        Pružamo geodetske usluge od terenskog mjerenja i snimanja
+        postojećeg stanja do izrade geodetskih podloga, elaborata
+        i digitalnih podataka potrebnih za projektiranje i izvođenje radova.
       </p>
 
       <div class="service-grid">
 
-        <div class="service-card">
-          <h3>Geodetske usluge</h3>
+        <div class="service-card primary">
+          <h3>Geodetski poslovi</h3>
+
           <p>
-            Geodetska mjerenja, snimanje postojećeg stanja
-            i izrada kvalitetnih prostornih podloga.
+            Terenska mjerenja i geodetske usluge za privatne,
+            poslovne, građevinske i infrastrukturne potrebe.
           </p>
+
+          <ul>
+            <li>geodetsko snimanje</li>
+            <li>snimanje postojećeg stanja</li>
+            <li>geodetske podloge</li>
+            <li>geodetski elaborati</li>
+            <li>iskolčenje i kontrolna mjerenja</li>
+          </ul>
         </div>
 
         <div class="service-card">
-          <h3>3D i LiDAR skeniranje</h3>
+          <h3>3D i LiDAR snimanje</h3>
+
           <p>
-            Brzo i detaljno snimanje objekata, interijera,
-            infrastrukture i kompleksnih prostornih cjelina.
+            Suvremene metode prostornog snimanja omogućuju brzo
+            i detaljno prikupljanje podataka objekata,
+            interijera i infrastrukturnih cjelina.
           </p>
+
+          <ul>
+            <li>3D snimanje objekata</li>
+            <li>LiDAR skeniranje</li>
+            <li>oblaci točaka</li>
+            <li>dokumentiranje postojećeg stanja</li>
+          </ul>
         </div>
 
         <div class="service-card">
-          <h3>CAD i 3D dokumentacija</h3>
+          <h3>CAD i prostorna dokumentacija</h3>
+
           <p>
-            Obrada oblaka točaka i izrada tlocrta,
-            presjeka, nacrta i drugih digitalnih podloga.
+            Obradom terenskih i 3D podataka izrađujemo
+            digitalne podloge pogodne za daljnje projektiranje
+            i tehničku dokumentaciju.
           </p>
+
+          <ul>
+            <li>tlocrti</li>
+            <li>presjeci</li>
+            <li>2D CAD podloge</li>
+            <li>obrada oblaka točaka</li>
+          </ul>
         </div>
 
       </div>
@@ -322,35 +407,42 @@
 
   <section id="o-nama">
     <div class="container">
+
       <div class="about-grid">
 
         <div class="about-text">
+
           <h2 class="section-title">O nama</h2>
 
           <p>
-            GEO-LINEA d.o.o. je tvrtka usmjerena na geodeziju,
-            prostorne tehnologije i suvremene metode prikupljanja
-            i obrade prostornih podataka.
+            GEO-LINEA d.o.o. je tvrtka specijalizirana za geodetske
+            usluge, izradu geodetskih podloga i elaborata
+            te prikupljanje i obradu prostornih podataka.
           </p>
 
           <p>
-            Kombiniramo klasične geodetske metode s modernim
-            tehnologijama poput LiDAR-a, 3D skeniranja,
-            digitalnih oblaka točaka i automatizirane obrade podataka.
+            Klasične geodetske metode povezujemo sa suvremenim
+            tehnologijama poput 3D i LiDAR skeniranja kako bismo
+            učinkovito prikupili kvalitetne podatke o prostoru
+            i postojećem stanju objekata.
           </p>
+
         </div>
 
         <div class="highlight-box">
-          <h3>Od terena do digitalnog modela</h3>
+
+          <h3>Od mjerenja do gotove podloge</h3>
 
           <p>
-            Cilj nam je isporučiti podatke koji nisu samo precizni,
-            već ih projektanti, izvođači i investitori mogu
-            odmah koristiti u svom svakodnevnom radu.
+            Fokus nam je na pouzdanim i praktično upotrebljivim
+            rezultatima koje projektanti, izvođači, investitori
+            i vlasnici nekretnina mogu koristiti u daljnjem radu.
           </p>
+
         </div>
 
       </div>
+
     </div>
   </section>
 
@@ -360,7 +452,8 @@
       <h2 class="section-title">Kontakt</h2>
 
       <p class="section-intro">
-        Imate projekt ili trebate prostorne podatke postojećeg stanja?
+        Trebate geodetsku uslugu, snimanje postojećeg stanja
+        ili prostornu podlogu za projekt?
         Javite nam se.
       </p>
 
@@ -373,11 +466,14 @@
 
         <div class="contact-item">
           <strong>Email</strong>
-          <a href="mailto:info@geolinea.hr">info@geolinea.hr</a>
+          <a href="mailto:info@geolinea.hr">
+            info@geolinea.hr
+          </a>
         </div>
 
         <div class="contact-item">
-          <strong>Lokacija</strong>
+          <strong>Adresa</strong>
+          Ulica Vilima Korajca 11<br>
           Zagreb, Hrvatska
         </div>
 
@@ -390,7 +486,32 @@
 
 <footer>
   <div class="container">
-    © 2026 GEO-LINEA d.o.o. Sva prava pridržana.
+
+    <div class="footer-grid">
+
+      <div>
+        <div class="footer-company">
+          GEO-LINEA d.o.o.
+        </div>
+
+        <div>
+          GEO-LINEA d.o.o. za geodetske usluge i projektiranje<br>
+          Ulica Vilima Korajca 11, Zagreb
+        </div>
+      </div>
+
+      <div class="footer-details">
+        OIB: 58637680274<br>
+        MBS: 080484392<br>
+        EUID: HRSR.080484392<br>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      © 2026 GEO-LINEA d.o.o. Sva prava pridržana.
+    </div>
+
   </div>
 </footer>
 
