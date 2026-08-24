@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta
+    name="description"
+    content="GEO-LINEA d.o.o. - geodetske usluge, 3D skeniranje, LiDAR i obrada prostornih podataka."
+  />
+
+  <title>GEO-LINEA d.o.o.</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.6;
+      color: #1f2933;
+      background: #ffffff;
+    }
+
+    .container {
+      width: min(1100px, 90%);
+      margin: 0 auto;
+    }
+
+    header {
+      background: #ffffff;
+      border-bottom: 1px solid #e5e7eb;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    nav {
+      min-height: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
+    }
+
+    .logo {
+      font-size: 1.4rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+      color: #123c69;
+      text-decoration: none;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 24px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: #374151;
+      text-decoration: none;
+      font-size: 0.95rem;
+    }
+
+    .nav-links a:hover {
+      color: #123c69;
+    }
+
+    .hero {
+      min-height: 620px;
+      display: flex;
+      align-items: center;
+      background:
+        linear-gradient(
+          rgba(10, 35, 60, 0.82),
+          rgba(10, 35, 60, 0.82)
+        ),
+        url("https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1800&q=80")
+        center / cover no-repeat;
+      color: #ffffff;
+    }
+
+    .hero-content {
+      max-width: 720px;
+    }
+
+    .hero h1 {
+      font-size: clamp(2.5rem, 6vw, 4.8rem);
+      line-height: 1.05;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      max-width: 650px;
+      margin-bottom: 32px;
+      color: #e5edf5;
+    }
+
+    .button {
+      display: inline-block;
+      background: #ffffff;
+      color: #123c69;
+      padding: 13px 22px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 700;
+    }
+
+    .button:hover {
+      opacity: 0.9;
+    }
+
+    section {
+      padding: 90px 0;
+    }
+
+    .section-title {
+      font-size: 2rem;
+      margin-bottom: 15px;
+      color: #123c69;
+    }
+
+    .section-intro {
+      max-width: 720px;
+      color: #64748b;
+      margin-bottom: 45px;
+    }
+
+    .services {
+      background: #f7f9fb;
+    }
+
+    .service-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .service-card {
+      background: #ffffff;
+      border: 1px solid #e5e7eb;
+      border-radius: 10px;
+      padding: 30px;
+    }
+
+    .service-card h3 {
+      margin-bottom: 12px;
+      color: #123c69;
+    }
+
+    .service-card p {
+      color: #64748b;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .about-text p {
+      margin-bottom: 18px;
+      color: #4b5563;
+    }
+
+    .highlight-box {
+      background: #123c69;
+      color: #ffffff;
+      padding: 45px;
+      border-radius: 10px;
+    }
+
+    .highlight-box h3 {
+      margin-bottom: 16px;
+      font-size: 1.5rem;
+    }
+
+    .highlight-box p {
+      color: #dbe7f3;
+    }
+
+    .contact {
+      background: #0d2f50;
+      color: #ffffff;
+    }
+
+    .contact .section-title {
+      color: #ffffff;
+    }
+
+    .contact .section-intro {
+      color: #c7d5e3;
+    }
+
+    .contact-info {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+      margin-top: 35px;
+    }
+
+    .contact-item strong {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    .contact-item a {
+      color: #ffffff;
+      text-decoration: none;
+    }
+
+    footer {
+      background: #081f35;
+      color: #aebdca;
+      padding: 25px 0;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 800px) {
+      .nav-links {
+        display: none;
+      }
+
+      .service-grid,
+      .about-grid,
+      .contact-info {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        min-height: 520px;
+      }
+
+      section {
+        padding: 65px 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="container">
+    <nav>
+      <a href="#" class="logo">GEO-LINEA</a>
+
+      <ul class="nav-links">
+        <li><a href="#usluge">Usluge</a></li>
+        <li><a href="#o-nama">O nama</a></li>
+        <li><a href="#kontakt">Kontakt</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <section class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <h1>Precizni prostorni podaci za stvarni svijet.</h1>
+
+        <p>
+          GEO-LINEA pruža geodetske usluge, 3D snimanje,
+          LiDAR skeniranje i obradu prostornih podataka
+          za građevinske, infrastrukturne i industrijske projekte.
+        </p>
+
+        <a href="#kontakt" class="button">Kontaktirajte nas</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="usluge" class="services">
+    <div class="container">
+      <h2 class="section-title">Usluge</h2>
+
+      <p class="section-intro">
+        Od terenskog prikupljanja podataka do gotovih digitalnih podloga
+        za projektiranje, dokumentiranje i upravljanje prostorom.
+      </p>
+
+      <div class="service-grid">
+
+        <div class="service-card">
+          <h3>Geodetske usluge</h3>
+          <p>
+            Geodetska mjerenja, snimanje postojećeg stanja
+            i izrada kvalitetnih prostornih podloga.
+          </p>
+        </div>
+
+        <div class="service-card">
+          <h3>3D i LiDAR skeniranje</h3>
+          <p>
+            Brzo i detaljno snimanje objekata, interijera,
+            infrastrukture i kompleksnih prostornih cjelina.
+          </p>
+        </div>
+
+        <div class="service-card">
+          <h3>CAD i 3D dokumentacija</h3>
+          <p>
+            Obrada oblaka točaka i izrada tlocrta,
+            presjeka, nacrta i drugih digitalnih podloga.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="o-nama">
+    <div class="container">
+      <div class="about-grid">
+
+        <div class="about-text">
+          <h2 class="section-title">O nama</h2>
+
+          <p>
+            GEO-LINEA d.o.o. je tvrtka usmjerena na geodeziju,
+            prostorne tehnologije i suvremene metode prikupljanja
+            i obrade prostornih podataka.
+          </p>
+
+          <p>
+            Kombiniramo klasične geodetske metode s modernim
+            tehnologijama poput LiDAR-a, 3D skeniranja,
+            digitalnih oblaka točaka i automatizirane obrade podataka.
+          </p>
+        </div>
+
+        <div class="highlight-box">
+          <h3>Od terena do digitalnog modela</h3>
+
+          <p>
+            Cilj nam je isporučiti podatke koji nisu samo precizni,
+            već ih projektanti, izvođači i investitori mogu
+            odmah koristiti u svom svakodnevnom radu.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="kontakt" class="contact">
+    <div class="container">
+
+      <h2 class="section-title">Kontakt</h2>
+
+      <p class="section-intro">
+        Imate projekt ili trebate prostorne podatke postojećeg stanja?
+        Javite nam se.
+      </p>
+
+      <div class="contact-info">
+
+        <div class="contact-item">
+          <strong>Tvrtka</strong>
+          GEO-LINEA d.o.o.
+        </div>
+
+        <div class="contact-item">
+          <strong>Email</strong>
+          <a href="mailto:info@geolinea.hr">info@geolinea.hr</a>
+        </div>
+
+        <div class="contact-item">
+          <strong>Lokacija</strong>
+          Zagreb, Hrvatska
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="container">
+    © 2026 GEO-LINEA d.o.o. Sva prava pridržana.
+  </div>
+</footer>
+
+</body>
+</html>
